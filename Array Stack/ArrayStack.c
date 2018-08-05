@@ -6,7 +6,7 @@ void AS_CreateStack(ArrayStack** Stack, int Capacity)
 	(*Stack) = (ArrayStack*)malloc(sizeof(ArrayStack));
 
 	/* 입력된 Capacity 만큼의 노드를 자유 저장소에 생성 */
-	(*Stack)->Nodes = (Node*)malloc(sizeof(Node)*Capacity);
+	(*Stack)->Nodes = (Node*)malloc(sizeof(Node) * Capacity);
 
 	/* Capacity 및 Top 초기화 */
 	(*Stack)->Capacity = Capacity;
@@ -28,8 +28,8 @@ void AS_Push(ArrayStack* Stack, ElementType Data)
 
 	if(AS_IsFull(Stack) == 1)
 	{
-		(*Stack).Nodes = (Node*)realloc(Stack->Nodes, sizeof(Node)*ceil(Stack->Capacity*1.3));
-		(*Stack).Capacity = (int)ceil((*Stack).Capacity*1.3);
+		(*Stack).Nodes = (Node*)realloc(Stack->Nodes, sizeof(Node) * ceil(Stack->Capacity * 1.3));
+		(*Stack).Capacity = (int)ceil((*Stack).Capacity * 1.3);
 	}
 
 	Stack->Nodes[Position].Data = Data;
@@ -45,8 +45,8 @@ ElementType AS_Pop(ArrayStack* Stack)
 
 	if(AS_GetSize(Stack) < (*Stack).Capacity * 0.7)
 	{
-		(*Stack).Nodes = (Node*)realloc(Stack->Nodes, sizeof(Node)*ceil(Stack->Capacity*0.7));
-		(*Stack).Capacity = (int)ceil(Stack->Capacity*0.7);
+		(*Stack).Nodes = (Node*)realloc(Stack->Nodes, sizeof(Node) * ceil(Stack->Capacity * 0.7));
+		(*Stack).Capacity = (int)ceil(Stack->Capacity * 0.7);
 	}
 
 	return temp;
