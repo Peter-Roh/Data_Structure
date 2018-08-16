@@ -6,7 +6,7 @@ void CQ_CreateQueue(CircularQueue** Queue, int Capacity)
 	(*Queue) = (CircularQueue*)malloc(sizeof(CircularQueue));
 
 	/* 입력된 Capacity+1 만큼의 노드를 자유 저장소에 생성 */
-	(*Queue)->Nodes = (Node*)malloc(sizeof(Node)*(Capacity+1));
+	(*Queue)->Nodes = (Node*)malloc(sizeof(Node)*(Capacity + 1));
 
 	(*Queue)->Capacity = Capacity;
 	(*Queue)->Front = 0;
