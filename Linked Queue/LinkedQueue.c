@@ -24,7 +24,7 @@ void LQ_DestroyQueue(LinkedQueue* Queue)
 Node* LQ_CreateNode(char* NewData)
 {
 	Node* NewNode = (Node*)malloc(sizeof(Node));
-	NewNode->Data = (char*)malloc(sizeof(NewData)+1);
+	NewNode->Data = (char*)malloc(sizeof(NewData) + 1);
 
 	strcpy(NewNode->Data, NewData); /* 데이터를 저장한다. */
 
