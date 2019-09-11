@@ -22,3 +22,4 @@ book : 뇌를 자극하는 알고리즘(박상현 저, 한빛미디어)
 ---
 
 added files while taking course at school. (COSE213 Data Structure at Korea University from Professor Yon Dohn Chung)
+book: "Data Structures: A Pseudocode Approach with C", (Second Edition), 2005 Richard F. Gilberg and Behrouz A. Forouzan
